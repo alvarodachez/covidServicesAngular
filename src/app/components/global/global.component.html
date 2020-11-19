@@ -1,0 +1,21 @@
+<div class="card-columns">
+
+    <div class="card">
+        <h5 class="card-header">Global</h5>
+        <div class="card-body">
+            <h5 class="card-title">Información</h5>
+            <p class="card-text">Confirmados: {{globalInfo.NewConfirmed}} / {{globalInfo.TotalConfirmed}} </p>
+            <p class="card-text">Muertos: {{globalInfo.NewDeaths}} / {{globalInfo.TotalDeaths}} </p>
+            <p class="card-text">Recuperados: {{globalInfo.NewRecovered}} / {{globalInfo.TotalRecovered}} </p>
+        </div>
+    </div>
+    <div *ngFor="let info of spainInfo; let i=index" class="card">
+        <h5 class="card-header">{{info.Country}}</h5>
+        <div class="card-body">
+            <h5 class="card-title">Información</h5>
+            <p class="card-text">Confirmados: {{info.NewConfirmed}} / {{info.TotalConfirmed}} </p>
+            <p class="card-text">Muertos: {{info.NewDeaths}} / {{info.TotalDeaths}}</p>
+            <p class="card-text">Recuperados: {{info.NewRecovered}} / {{info.TotalRecovered}} </p>
+        </div>
+    </div>
+</div>
