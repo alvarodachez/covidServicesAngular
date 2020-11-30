@@ -25,11 +25,11 @@ export class CovidService {
   }
 
   spainResults(): Observable<any>{
-    const endPoint = 'https://api.covid19api.com/summary';
-    return this.http.get(endPoint).pipe( map(res =>{
-      return res["Countries"].filter( country => {
-        return country.Country === 'Spain';
-      });
-    }))
+    return this.http.get("https://api.covid19api.com/summary")
+      .pipe( map(res =>
+        res["Countries"].filter( country => 
+          country.Country === 'Spain')
+      )
+    )
   }
 }
